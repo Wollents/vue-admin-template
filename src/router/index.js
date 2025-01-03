@@ -149,6 +149,20 @@ export const constantRoutes = [
     ]
   },
 
+  
+  {
+    path: '/graph',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'test',
+        component: () => import('@/views/graph/index'),
+        meta: { title: 'graph', icon: 'form' }
+      }
+    ]
+  },
+
   {
     path: 'external-link',
     component: Layout,
@@ -159,7 +173,7 @@ export const constantRoutes = [
       }
     ]
   },
-
+  
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
